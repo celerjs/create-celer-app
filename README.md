@@ -22,11 +22,11 @@ $ yarn dev
 
 Available templates:
 
-- `vue` (default)
+- `default` (default)
 
 
 To scaffold with specific template:
 
 ```bash
-$ npm init celer-app my-react-project --template xxxx
+$ npm init celer-app my-app --template xxxx
 ```

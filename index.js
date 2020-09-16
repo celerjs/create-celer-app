@@ -43,7 +43,7 @@ async function init() {
   pkg.name = path.basename(root)
   await write('package.json', JSON.stringify(pkg, null, 2))
 
-  console.log(`\nDone. Now run:\n`)
+  console.log(`\nCreate Done. Now run:\n`)
   if (root !== cwd) {
     console.log(`  cd ${path.relative(cwd, root)}`)
   }
