@@ -1,0 +1,12 @@
+/**
+ * @description vscode 路径提示
+ */
+{ 
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+          "@/*": ["src/*"]
+      }
+    },
+    "exclude": ["node_modules", "dist"]
+}
