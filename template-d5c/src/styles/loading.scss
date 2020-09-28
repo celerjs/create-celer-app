@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import "./spinner/gauge.css";
+@import "./spinner/inner-circles.css";
+
+$base-loading: ".loading-type";
+
+/* 自定义loading开始 */
+
+
+#{$base-loading}-1 {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto 25px auto;
+  perspective: 200px;
+}
+
+#{$base-loading}-1::before,
+#{$base-loading}-1::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: rgba(0, 0, 0, 0);
+  animation: vaLoading1 0.5s infinite alternate;
+}
+
+#{$base-loading}-1::before {
+  left: 0;
+}
+
+#{$base-loading}-1::after {
+  right: 0;
+  animation-delay: 0.15s;
+}
+
+@keyframes vaLoading1 {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1) translateY(0) rotateX(0deg);
+  }
+
+  100% {
+    background: $base-color-blue;
+    box-shadow: 0 25px 40px rgba($base-color-blue, 0.5);
+    transform: scale(1.2) translateY(-25px) rotateX(45deg);
+  }
+}
+
+
+/* 自定义loading结束 */

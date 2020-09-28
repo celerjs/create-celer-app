@@ -1,0 +1,50 @@
+### login
+POST http://192.168.2.140:23333/paas/userlogin?md=10&cmd=01
+Content-Type: application/json; charset=utf-8
+op_code: PA001
+product_id: 2020
+
+{
+    "a": 13812345600,
+    "b": "e10adc3949ba59abbe56e057f20f883e"
+}
+
+### userInfo
+POST http://192.168.2.140:23333/saas/res/user/login/info
+Content-Type: application/json; charset=utf-8
+product_id: 2020
+token: 72DB4076000681DF
+user_id: 426463
+op_code:
+op_ncode:
+
+### company/simple/list
+POST http://192.168.2.140:23333/saas/res/company/simple/list
+Content-Type: application/json; charset=utf-8
+product_id: 2020
+token: 7302B2ED000681DF
+user_id: 426463
+op_code:
+op_ncode:
+user_type: 2,16,11,13
+cpy_id: 0
+cpy_type: 2
+dt_type: 1
+
+{"c":2020,"a":"陈"}
+
+
+### res/company/invoice/add
+POST http://localhost:8088/dev-api/saas/res/company/invoice/add
+Content-Type: application/json; charset=utf-8
+product_id: 2020
+token: 7302B2ED000681DF
+user_id: 426463
+op_code:PR039
+op_ncode:
+user_type: 2
+cpy_id: 0
+cpy_type: 2
+dt_type: 1
+
+{"a":911,"b":"奥术大师多","c":"奥术大师大所","g":"大叔大婶多","d":"654461","f":"奥术大师多","e":"1515121122","h":"撒大声地","i":0,"op_code":"PR039"}
