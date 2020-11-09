@@ -23,3 +23,25 @@ export const getInfo = () => {
     return res;
   });
 };
+
+/* ----------发送验证码------------ */
+export const sendCode = (data, options = {}) => {
+  // 入参处理
+  const req = sendCodeType.req(data);
+  return request.post("/saas/acc/msm/securitycode", req).then((res) => {
+    //  回参处理
+    res = getInfoType.res(res.d);
+    return res;
+  });
+};
+
+/* ----------注册------------ */
+export const register = (data, options = {}) => {
+  // 入参处理
+  const req = registerType.req(data);
+  return request.post("/saas/acc/user/register", req, options).then((res) => {
+    //  回参处理
+    // res = getInfoType.res(res.d);
+    return res;
+  });
+};

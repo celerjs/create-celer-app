@@ -194,6 +194,11 @@ export default {
         height: 100%;
         border: none;
       }
+      &.picture {
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+      }
     }
   }
 

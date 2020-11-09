@@ -20,7 +20,7 @@ export const getInfoType = {
     return {
       userType: d.a,
       userId: d.b,
-      username: d.c,
+      username: d.c || "新注册用户",
       mobile: d.d,
       jobNumber: d.e || "",
       companyId: d.f,
@@ -31,4 +31,24 @@ export const getInfoType = {
       dataType: d.k,
     };
   },
+};
+
+/* 发送验证码 */
+export const sendCodeType = {
+  req: (d) => ({
+    b: d.mobile,
+    c: d.type,
+  }),
+};
+
+/* 注册 */
+export const registerType = {
+  req: (d) => ({
+    a: d.name,
+    b: d.username,
+    c: d.password,
+    d: 1,
+    e: d.code,
+    f: productId,
+  }),
 };

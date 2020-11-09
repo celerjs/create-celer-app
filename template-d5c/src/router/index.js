@@ -29,6 +29,11 @@ export const constantRoutes = [
     hidden: true,
   },
   {
+    path: "/register",
+    component: () => import(/* webpackChunkName: "index" */ "@/views/register"),
+    hidden: true,
+  },
+  {
     path: "/account",
     hidden: true,
     component: Layout,

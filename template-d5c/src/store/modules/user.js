@@ -58,9 +58,9 @@ const actions = {
     removeUserId();
     router.push("/login");
   },
-  getInfo({ commit }) {
+  getInfo({ dispatch }) {
     return getInfo().then((res) => {
-      commit("setUserInfo", res);
+      dispatch("setUserInfo", res);
     });
   },
 };
