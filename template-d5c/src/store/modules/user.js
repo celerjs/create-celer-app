@@ -59,9 +59,14 @@ const actions = {
     router.push("/login");
   },
   getInfo({ dispatch }) {
-    return getInfo().then((res) => {
-      dispatch("setUserInfo", res);
-    });
+    return getInfo()
+      .then((res) => {
+        dispatch("setUserInfo", res);
+      })
+      .catch(() => {
+        Vue.prototype.$baseMessage("获取登录用户信息失败", "error");
+        throw new Error("获取登录用户信息失败");
+      });
   },
 };
 

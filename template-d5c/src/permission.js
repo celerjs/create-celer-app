@@ -11,15 +11,16 @@ NProgress.configure({ showSpinner: false });
 router.beforeEach(async (to, from, next) => {
   NProgress.start();
   document.title = getPageTitle(to.meta.title);
-  let hasToken = store.getters["user/accessToken"];
-  if (hasToken) {
-    if (to.path === "/login") {
-      next("/");
-      NProgress.done();
-    } else {
+  const hasToken = store.getters["user/accessToken"];
+  const userInfo = store.getters["user/userInfo"];
+
+  if (to.path === "/login" || to.path === "/register") {
+    next();
+    NProgress.done();
+  } else {
+    if (hasToken) {
       try {
-        // userInfo
-        const userInfo = store.getters["user/userInfo"];
+        //userInfo
         if (!userInfo.userId) {
           await store.dispatch("user/getInfo");
         }
@@ -29,11 +30,6 @@ router.beforeEach(async (to, from, next) => {
         next(`/login?redirect=${to.path}`);
         NProgress.done();
       }
-    }
-  } else {
-    if (to.path === "/login") {
-      next();
-      NProgress.done();
     } else {
       next(`/login?redirect=${to.path}`);
       NProgress.done();

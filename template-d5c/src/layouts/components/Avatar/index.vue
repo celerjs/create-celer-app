@@ -52,3 +52,14 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.user-avatar {
+  vertical-align: middle;
+  margin-right: 6px;
+  cursor: pointer;
+}
+.user-name {
+  font-weight: 600;
+  cursor: pointer;
+}
+</style>

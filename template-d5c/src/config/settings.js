@@ -12,7 +12,7 @@ module.exports = {
   //标题简写
   abbreviation: "tpl",
   //开发环境端口号
-  devPort: "8282",
+  devPort: "8080",
   //版本号
   version: process.env.VUE_APP_VERSION,
   //加载时显示文字

@@ -99,52 +99,7 @@ export default {
     align-items: center;
     justify-content: flex-end;
     height: $base-nav-bar-height;
-
-    ::v-deep {
-      .user-avatar {
-        margin-right: 5px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .user-name {
-        position: relative;
-        top: -14px;
-        margin-right: 35px;
-        margin-left: 5px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .user-name + i {
-        position: absolute;
-        top: 14px;
-        right: 15px;
-      }
-
-      svg {
-        width: 1em;
-        height: 1em;
-        margin-right: 15px;
-        font-size: $base-font-size-big;
-        color: $base-font-color;
-        cursor: pointer;
-        fill: $base-font-color;
-      }
-
-      button {
-        svg {
-          margin-right: 0;
-          color: $base-color-white;
-          cursor: pointer;
-          fill: $base-color-white;
-        }
-      }
-
-      .el-badge {
-        margin-right: 15px;
-      }
-    }
+    padding-right: 15px;
   }
 }
 </style>
