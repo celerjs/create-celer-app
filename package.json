@@ -1,6 +1,6 @@
 {
   "name": "create-celer-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "author": "cyea",
   "main": "index.js",
@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyea/create-celer-app.git"
+    "url": "git+https://github.com/celerjs/create-celer-app.git"
   },
   "bugs": {
-    "url": "https://github.com/cyea/create-celer-app/issues"
+    "url": "https://github.com/celerjs/create-celer-app/issues"
   },
-  "homepage": "https://github.com/cyea/create-celer-app/tree/master/#readme",
+  "homepage": "https://github.com/celerjs/create-celer-app/tree/master/#readme",
   "dependencies": {
     "fs-extra": "^9.0.1",
     "minimist": "^1.2.5"
